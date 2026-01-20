@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+canvas {
+    background: linear-gradient(180deg, #87CEEB 0%, #b8dff5 50%, #d4e9f7 100%);
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+.instructions {
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: 15px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    display: inline-block;
+}
+
+.score {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Nuevo cuadro de notificación de canasta */
+.basket-notification {
+    position: fixed;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 25px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: top 0.5s ease;
+    border: 3px solid #4CAF50;
+}
+
+.basket-notification.show {
+    top: 30px;
+}
+
+.basket-notification h2 {
+    margin: 0 0 10px 0;
+    color: #4CAF50;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.basket-notification p {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media (max-width:1024px) {
+    .basket-notification {
+        display: none;
+    }
+
+}
